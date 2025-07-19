@@ -63,7 +63,20 @@ Access at: `http://localhost:3001/naut-news.html`
 
 ## 📋 Project Status
 
-✅ **Production Ready** - Fully functional news aggregator ready for use
+🔶 **Alpha Version** - Experimental news aggregator built with AI assistance
+
+This project was created using **Cursor AI** and **Claude Anthropic 4.0** as a proof-of-concept for AI-assisted development. The entire codebase was generated through AI pair programming sessions.
+
+### 📚 **Educational Use**
+- ✅ **Free for educational purposes** - Learn, experiment, and build upon this foundation
+- ✅ **Open source learning** - Explore AI-generated code patterns and architectures
+- ✅ **Experimentation friendly** - Perfect for testing news aggregation concepts
+- ⚠️ **Alpha software** - Use at your own discretion, may contain bugs or incomplete features
+
+### 🤖 **AI Development Credits**
+- **Primary AI**: Claude Anthropic 4.0 (Sonnet)
+- **Development Environment**: Cursor AI IDE
+- **Methodology**: AI pair programming and iterative development
 
 ## 🐳 Docker Support
 
