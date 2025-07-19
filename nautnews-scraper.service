@@ -1,0 +1,17 @@
+[Unit]
+Description=NautNews Scraper Service
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/path/to/nautnews
+ExecStart=/usr/bin/node /path/to/nautnews/news-scraper.js
+Restart=on-failure
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nautnews-scraper
+
+[Install]
+WantedBy=multi-user.target 

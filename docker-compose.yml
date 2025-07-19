@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  news-scraper:
+    build: .
+    container_name: nautnews-scraper
+    volumes:
+      - ./data:/usr/src/app/data
+    environment:
+      - OUTPUT_FILE=data/news-data.json
+      - UPDATE_INTERVAL=900000  # 15 minutes in milliseconds
+    restart: unless-stopped
+
+  web-server:
+    image: nginx:alpine
+    container_name: nautnews-web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:/usr/share/nginx/html/data
+      - ./naut-news-generated.html:/usr/share/nginx/html/index.html
+      - ./naut-styles.css:/usr/share/nginx/html/styles.css
+      - ./naut-script.js:/usr/share/nginx/html/script.js
+    depends_on:
+      - news-scraper
+    restart: unless-stopped 

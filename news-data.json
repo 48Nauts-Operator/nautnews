@@ -1,0 +1,110 @@
+[
+  {
+    "title": "OpenAI Announces GPT-5 with Enhanced Reasoning Capabilities",
+    "url": "https://openai.com/blog/gpt-5",
+    "sourceName": "OpenAI Blog",
+    "sourceUrl": "https://openai.com/blog",
+    "category": "ai",
+    "date": "2025-03-15T14:30:00Z",
+    "summary": "OpenAI has unveiled GPT-5, featuring significant improvements in reasoning, planning, and factual accuracy. The new model demonstrates enhanced capabilities in complex problem-solving and shows a 40% reduction in hallucinations compared to GPT-4."
+  },
+  {
+    "title": "Google DeepMind Achieves Breakthrough in Protein Folding Prediction",
+    "url": "https://ai.googleblog.com/2025/03/deepmind-protein-folding-breakthrough.html",
+    "sourceName": "Google AI Blog",
+    "sourceUrl": "https://ai.googleblog.com",
+    "category": "ai",
+    "date": "2025-03-12T09:15:00Z",
+    "summary": "Google DeepMind researchers have announced a major advancement in protein structure prediction, enabling the accurate modeling of complex protein interactions that were previously impossible to simulate."
+  },
+  {
+    "title": "New Study Links Meditation to Increased Gray Matter in Brain",
+    "url": "https://neurosciencenews.com/meditation-gray-matter-increase-2025",
+    "sourceName": "Neuroscience News",
+    "sourceUrl": "https://neurosciencenews.com",
+    "category": "brain-health",
+    "date": "2025-03-10T11:45:00Z",
+    "summary": "A comprehensive longitudinal study has found that regular meditation practice over a six-month period leads to measurable increases in gray matter density in regions associated with attention, emotional regulation, and memory."
+  },
+  {
+    "title": "Apple Unveils Neural Interface for Next-Generation AR Glasses",
+    "url": "https://techcrunch.com/2025/03/09/apple-neural-interface-ar-glasses",
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com",
+    "category": "technology",
+    "date": "2025-03-09T16:20:00Z",
+    "summary": "Apple has revealed its latest innovation: a non-invasive neural interface that allows users to control AR glasses with thoughts. The technology, which will be integrated into the company's upcoming AR product line, represents a significant leap forward in human-computer interaction."
+  },
+  {
+    "title": "Swiss National Bank Introduces Digital Franc Pilot Program",
+    "url": "https://www.swissinfo.ch/eng/swiss-national-bank-digital-franc-pilot",
+    "sourceName": "SWI swissinfo.ch",
+    "sourceUrl": "https://www.swissinfo.ch/eng",
+    "category": "switzerland",
+    "date": "2025-03-08T10:30:00Z",
+    "summary": "The Swiss National Bank has launched a pilot program for a digital version of the Swiss franc, allowing a select group of financial institutions to test the new currency in a controlled environment. The move positions Switzerland among the leading nations in central bank digital currency development."
+  },
+  {
+    "title": "Novel Brain Stimulation Technique Shows Promise for Treatment-Resistant Depression",
+    "url": "https://www.brainandlife.org/novel-brain-stimulation-depression-treatment",
+    "sourceName": "Brain & Life",
+    "sourceUrl": "https://www.brainandlife.org",
+    "category": "brain-health",
+    "date": "2025-03-07T13:45:00Z",
+    "summary": "Researchers have developed a new form of targeted brain stimulation that has shown remarkable efficacy in treating depression that hasn't responded to conventional therapies. The technique uses precision-guided ultrasound to modulate activity in specific neural circuits."
+  },
+  {
+    "title": "Global Markets React to Federal Reserve's Unexpected Rate Cut",
+    "url": "https://www.bloomberg.com/news/articles/2025-03-06/markets-federal-reserve-rate-cut",
+    "sourceName": "Bloomberg",
+    "sourceUrl": "https://www.bloomberg.com",
+    "category": "finance",
+    "date": "2025-03-06T18:10:00Z",
+    "summary": "Global financial markets surged following the Federal Reserve's surprise decision to cut interest rates by 50 basis points. The move, which was not anticipated by most analysts, signals growing concerns about economic growth despite relatively stable inflation data."
+  },
+  {
+    "title": "MIT Researchers Develop Self-Healing Quantum Computing Chips",
+    "url": "https://www.technologyreview.com/2025/03/05/mit-self-healing-quantum-chips",
+    "sourceName": "MIT Technology Review",
+    "sourceUrl": "https://www.technologyreview.com",
+    "category": "technology",
+    "date": "2025-03-05T09:30:00Z",
+    "summary": "A team at MIT has created quantum computing chips with built-in self-healing capabilities, potentially solving one of the biggest challenges in quantum computing: maintaining qubit coherence in the face of environmental interference."
+  },
+  {
+    "title": "Show HN: I built an AI-powered code review tool that explains complex PRs",
+    "url": "https://news.ycombinator.com/item?id=39876543",
+    "sourceName": "Hacker News",
+    "sourceUrl": "https://news.ycombinator.com",
+    "category": "hacker-news",
+    "date": "2025-03-04T14:20:00Z",
+    "summary": "A developer has created an open-source tool that uses AI to analyze pull requests, explain complex code changes in plain language, and suggest improvements. The project has gained significant traction on GitHub with over 5,000 stars in its first week."
+  },
+  {
+    "title": "Zurich Introduces Autonomous Electric Bus Fleet in City Center",
+    "url": "https://www.thelocal.ch/20250303/zurich-autonomous-electric-buses",
+    "sourceName": "The Local Switzerland",
+    "sourceUrl": "https://www.thelocal.ch",
+    "category": "switzerland",
+    "date": "2025-03-03T11:15:00Z",
+    "summary": "Zurich has become the first Swiss city to deploy a fleet of fully autonomous electric buses in its downtown area. The vehicles, which operate without human drivers, are part of the city's ambitious plan to reduce carbon emissions and traffic congestion."
+  },
+  {
+    "title": "AI Startup Anthropic Releases Claude 3, Challenging GPT-4's Performance",
+    "url": "https://artificialintelligence-news.com/2025/03/02/anthropic-claude-3-gpt4-challenger",
+    "sourceName": "AI News",
+    "sourceUrl": "https://artificialintelligence-news.com",
+    "category": "ai",
+    "date": "2025-03-02T15:40:00Z",
+    "summary": "Anthropic has released Claude 3, its latest AI assistant that outperforms OpenAI's GPT-4 on several benchmarks including reasoning, coding, and factual accuracy. The model introduces a new approach to alignment that the company claims produces more helpful and harmless outputs."
+  },
+  {
+    "title": "Financial Times Investigates: The Hidden Costs of AI Infrastructure",
+    "url": "https://www.ft.com/content/ai-infrastructure-hidden-costs",
+    "sourceName": "Financial Times",
+    "sourceUrl": "https://www.ft.com",
+    "category": "finance",
+    "date": "2025-03-01T08:30:00Z",
+    "summary": "An in-depth investigation by the Financial Times reveals the enormous and often overlooked environmental and economic costs of building and maintaining the infrastructure required for training and running advanced AI models."
+  }
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My NautNews</title>
+    <link rel="stylesheet" href="naut-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b0c5175a2.js" crossorigin="anonymous"></script>
+    <script src="naut-news.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1><span class="highlight">My Naut</span>News</h1>
+                <a href="naut-settings.html" class="settings-link"><i class="fas fa-cog"></i> Settings</a>
+            </div>
+            <p class="subtitle">My daily dose of MCP generated news</p>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#all" class="active">All</a></li>
+                <li><a href="#ai">AI</a></li>
+                <li><a href="#brain-health">Brain Health</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#hacker-news">Hacker News</a></li>
+                <li><a href="#finance">Finance</a></li>
+                <li><a href="#switzerland">Switzerland</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="breaking-news">
+        <div class="container">
+            <span class="breaking-label">Breaking News</span>
+            <div class="breaking-content">
+                <p>Meditation induces changes in deep brain areas • Brazil's economy grows 3.4% in 2024</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="featured-news">
+            <article class="news-card featured">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="AI and Healthcare">
+                </div>
+                <div class="card-content">
+                    <span class="tag">Healthcare</span>
+                    <h2>Chatbots Outperform Doctors in Clinical Decision-Making Study</h2>
+                    <p class="summary">
+                        A groundbreaking study reveals that AI chatbots like ChatGPT-4 outperformed internal medicine residents and attending physicians at processing medical data and demonstrating clinical reasoning. The chatbot earned a median score of 10 out of 10, compared to 9 for attending physicians and 8 for residents. However, when doctors were armed with their own LLM, their performance matched the AI's capabilities.
+                    </p>
+                    <div class="card-footer">
+                        <a href="https://www.sciencedaily.com/releases/2025/02/250210133011.htm" class="read-more" target="_blank">
+                            Read Original <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <span class="date">February 10, 2025</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div id="dynamic-news-container">
+            <!-- News content will be loaded here dynamically -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="last-updated">Last updated: <span id="last-updated-time"></span></p>
+            <p>&copy; 2025 My NautNews. All rights reserved.</p>
+            <p>Data sourced from various news outlets. Images from Unsplash.</p>
+        </div>
+    </footer>
+</body>
+</html>

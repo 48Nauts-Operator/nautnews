@@ -1,0 +1,850 @@
+/* Settings Page Styles */
+
+/* Navigation */
+.settings-nav {
+    margin-top: 1rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.back-button i {
+    margin-right: 0.5rem;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Settings Sections */
+.settings-section {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Settings Card */
+.settings-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.settings-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Form Elements */
+.settings-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group input[type="color"] {
+    height: 40px;
+    padding: 0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Buttons */
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--card-header-bg);
+    color: var(--text-color);
+}
+
+.action-button i {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.action-button.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.action-button.primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.action-button.secondary {
+    background-color: var(--card-header-bg);
+    color: var(--text-color);
+}
+
+.action-button.secondary:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-1px);
+}
+
+.action-button.danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.action-button.danger:hover {
+    background-color: #ff1a36;
+    transform: translateY(-1px);
+}
+
+.action-button.small {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+}
+
+/* Category Menu */
+.category-menu {
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.category-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+}
+
+.category-menu ul::-webkit-scrollbar {
+    height: 4px;
+}
+
+.category-menu ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.category-menu ul::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.category-menu li {
+    margin-right: 0.5rem;
+}
+
+.category-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.category-menu a:hover {
+    color: var(--text-color);
+}
+
+.category-menu a.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Sources Stats */
+.sources-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+/* Sources Container */
+.sources-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Source Card */
+.source-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+    position: relative;
+    border-left: 3px solid transparent;
+}
+
+.source-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.source-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: var(--card-header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.source-name {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.source-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.source-actions button {
+    background: none;
+    border: none;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.source-actions button:hover {
+    color: var(--text-color);
+    background-color: var(--hover-bg);
+}
+
+.delete-source:hover {
+    color: var(--danger-color) !important;
+}
+
+.source-content {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.source-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+}
+
+.source-category, .source-articles-count {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.source-description {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.source-status {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.status-indicator.active {
+    background-color: var(--success-color);
+    box-shadow: 0 0 5px var(--success-color);
+}
+
+.status-indicator.inactive {
+    background-color: var(--danger-color);
+    box-shadow: 0 0 5px var(--danger-color);
+}
+
+.source-url {
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease;
+}
+
+.source-url:hover {
+    text-decoration: underline;
+}
+
+.url-text {
+    max-width: 180px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    margin-left: 0.5rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--success-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--success-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 10% auto;
+    padding: 0;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 1rem 1.5rem;
+    background-color: var(--card-header-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.close-modal {
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--text-color);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    padding: 1rem 1.5rem;
+    background-color: var(--card-header-bg);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* Status Message */
+.status-message {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.status-message.info {
+    background-color: var(--info-bg);
+    color: var(--info-color);
+}
+
+.status-message.success {
+    background-color: var(--success-bg);
+    color: var(--success-color);
+}
+
+.status-message.warning {
+    background-color: var(--warning-bg);
+    color: var(--warning-color);
+}
+
+.status-message.error {
+    background-color: var(--danger-bg);
+    color: var(--danger-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sources-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+    
+    .settings-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .settings-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .action-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .sources-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-menu ul {
+        padding-bottom: 0.5rem;
+    }
+}
+
+/* Category Styling */
+.category-tag-ai, 
+.category-tag-technology, 
+.category-tag-brain-health, 
+.category-tag-finance, 
+.category-tag-hacker-news, 
+.category-tag-switzerland, 
+.category-tag-other {
+    display: inline-block;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.category-tag-ai {
+    background-color: rgba(0, 198, 255, 0.15);
+    color: var(--ai-color);
+}
+
+.category-tag-technology {
+    background-color: rgba(0, 230, 118, 0.15);
+    color: var(--tech-color);
+}
+
+.category-tag-brain-health {
+    background-color: rgba(156, 95, 255, 0.15);
+    color: var(--brain-color);
+}
+
+.category-tag-finance {
+    background-color: rgba(255, 204, 0, 0.15);
+    color: var(--finance-color);
+}
+
+.category-tag-hacker-news {
+    background-color: rgba(255, 145, 0, 0.15);
+    color: var(--hacker-color);
+}
+
+.category-tag-switzerland {
+    background-color: rgba(255, 0, 0, 0.15);
+    color: var(--swiss-color);
+}
+
+.category-tag-other {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Source cards with category highlighting */
+.source-card {
+    border-left: 3px solid transparent;
+}
+
+.category-ai {
+    border-left-color: var(--ai-color);
+}
+
+.category-technology {
+    border-left-color: var(--tech-color);
+}
+
+.category-brain-health {
+    border-left-color: var(--brain-color);
+}
+
+.category-finance {
+    border-left-color: var(--finance-color);
+}
+
+.category-hacker-news {
+    border-left-color: var(--hacker-color);
+}
+
+.category-switzerland {
+    border-left-color: var(--swiss-color);
+}
+
+/* Empty state styling */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.empty-state h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.empty-state p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* View toggle */
+.sources-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.view-toggle {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.view-toggle-btn {
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.view-toggle-btn.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+/* List view */
+.sources-container.list-view .source-card {
+    display: none;
+}
+
+.sources-container.grid-view .source-list-item {
+    display: none;
+}
+
+.sources-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.sources-container.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.source-list-item {
+    display: flex;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.source-list-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.source-list-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    width: 100%;
+}
+
+.source-list-main {
+    flex: 1;
+}
+
+.source-list-item .source-name {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.source-list-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.source-list-meta a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.source-list-meta a:hover {
+    color: var(--accent-primary);
+}
+
+.source-list-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.source-list-item .source-status {
+    width: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+}
+
+.source-list-item .status-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.source-list-item .status-indicator.active {
+    background-color: var(--success-color);
+}
+
+.source-list-item .status-indicator.inactive {
+    background-color: var(--text-secondary);
+}
+
+/* Source categories for list view */
+.source-list-item.category-ai .source-status {
+    background-color: var(--ai-color);
+}
+
+.source-list-item.category-technology .source-status {
+    background-color: var(--tech-color);
+}
+
+.source-list-item.category-brain-health .source-status {
+    background-color: var(--brain-color);
+}
+
+.source-list-item.category-finance .source-status {
+    background-color: var(--finance-color);
+}
+
+.source-list-item.category-hacker-news .source-status {
+    background-color: var(--hacker-color);
+}
+
+.source-list-item.category-switzerland .source-status {
+    background-color: var(--swiss-color);
+} 

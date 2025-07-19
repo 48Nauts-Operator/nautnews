@@ -1,0 +1,23 @@
+{
+  "name": "naut-news-scraper",
+  "version": "1.0.0",
+  "description": "A news scraping service that updates data every 15 minutes",
+  "main": "news-scraper.js",
+  "scripts": {
+    "start": "node news-scraper.js",
+    "api": "node news-scraper-api.js",
+    "dev": "nodemon news-scraper-api.js"
+  },
+  "dependencies": {
+    "axios": "^1.8.2",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "puppeteer": "^24.4.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

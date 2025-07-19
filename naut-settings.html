@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NautNews Settings</title>
+    <link rel="stylesheet" href="naut-styles.css">
+    <link rel="stylesheet" href="settings-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b0c5175a2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><span class="highlight">My Naut</span>News</h1>
+            <p class="subtitle">Settings & Configuration</p>
+            <nav class="settings-nav">
+                <a href="naut-news.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to News</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="settings-section">
+            <div class="section-header">
+                <h2 class="section-title">Scraper Settings</h2>
+                <div class="settings-actions">
+                    <button id="save-settings" class="action-button primary"><i class="fas fa-save"></i> Save Changes</button>
+                    <button id="run-now" class="action-button secondary"><i class="fas fa-sync"></i> Run Scraper Now</button>
+                </div>
+            </div>
+            
+            <div class="settings-card">
+                <h3>General Settings</h3>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="update-interval">Update Interval (minutes)</label>
+                        <input type="number" id="update-interval" min="1" max="1440" value="60">
+                    </div>
+                    <div class="form-group">
+                        <label for="articles-per-source">Articles Per Source</label>
+                        <input type="number" id="articles-per-source" min="1" max="100" value="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="output-dir">Output Directory</label>
+                        <input type="text" id="output-dir" value="data">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="status-message" class="status-message" style="display: none;"></div>
+        </section>
+        
+        <section class="settings-section">
+            <div class="section-header">
+                <h2 class="section-title">News Sources</h2>
+                <div class="sources-actions">
+                    <div class="view-toggle">
+                        <button id="grid-view-btn" class="view-toggle-btn active" title="Grid View">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button id="list-view-btn" class="view-toggle-btn" title="List View">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    <button id="import-ai-sources" class="action-button secondary"><i class="fas fa-file-import"></i> Import AI Sources</button>
+                    <button id="add-source" class="action-button primary"><i class="fas fa-plus"></i> Add Source</button>
+                </div>
+            </div>
+            
+            <!-- Category Menu -->
+            <div class="category-menu">
+                <ul id="category-tabs">
+                    <li><a href="#" data-category="all" class="active">All Sources</a></li>
+                    <li><a href="#" data-category="ai">AI</a></li>
+                    <li><a href="#" data-category="technology">Technology</a></li>
+                    <li><a href="#" data-category="brain-health">Brain Health</a></li>
+                    <li><a href="#" data-category="finance">Finance</a></li>
+                    <li><a href="#" data-category="hacker-news">Hacker News</a></li>
+                    <li><a href="#" data-category="switzerland">Switzerland</a></li>
+                    <li><a href="#" data-category="other">Other</a></li>
+                </ul>
+            </div>
+            
+            <div class="sources-stats">
+                <span id="sources-count" class="sources-count">0 sources</span>
+                <span id="active-sources-count" class="active-sources-count">0 active</span>
+            </div>
+            
+            <div id="sources-container" class="sources-container">
+                <!-- Sources will be added here dynamically -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- Source Template -->
+    <template id="source-template">
+        <div class="source-card">
+            <div class="source-header">
+                <h3 class="source-name">Source Name</h3>
+                <div class="source-actions">
+                    <button class="edit-source" title="Edit Source"><i class="fas fa-edit"></i></button>
+                    <button class="delete-source" title="Delete Source"><i class="fas fa-trash"></i></button>
+                    <div class="source-toggle">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="source-content">
+                <div class="source-meta">
+                    <span class="source-category"><i class="fas fa-tag"></i> <span class="category-name">Category</span></span>
+                    <span class="source-articles-count"><i class="fas fa-newspaper"></i> <span class="articles-count">0</span> articles</span>
+                </div>
+                <p class="source-description">Source description goes here.</p>
+                <div class="source-status">
+                    <span class="status-indicator"></span>
+                </div>
+                <a href="#" class="source-url" target="_blank" title="Visit Source"><i class="fas fa-external-link-alt"></i> <span class="url-text">https://example.com</span></a>
+            </div>
+        </div>
+    </template>
+
+    <!-- Source List Item Template -->
+    <template id="source-list-item-template">
+        <div class="source-list-item">
+            <div class="source-list-content">
+                <div class="source-list-main">
+                    <h3 class="source-name">Source Name</h3>
+                    <div class="source-list-meta">
+                        <span class="source-category"><i class="fas fa-tag"></i> <span class="category-name">Category</span></span>
+                        <span class="source-articles-count"><i class="fas fa-newspaper"></i> <span class="articles-count">0</span> articles</span>
+                        <a href="#" class="source-url" target="_blank" title="Visit Source"><i class="fas fa-external-link-alt"></i> <span class="url-text">https://example.com</span></a>
+                    </div>
+                </div>
+                <div class="source-list-actions">
+                    <button class="edit-source" title="Edit Source"><i class="fas fa-edit"></i></button>
+                    <button class="delete-source" title="Delete Source"><i class="fas fa-trash"></i></button>
+                    <div class="source-toggle">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="source-status">
+                <span class="status-indicator"></span>
+            </div>
+        </div>
+    </template>
+    
+    <!-- Add Source Modal -->
+    <div id="add-source-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add News Source</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="source-name">Source Name*</label>
+                    <input type="text" id="source-name" placeholder="e.g., TechCrunch" required>
+                </div>
+                <div class="form-group">
+                    <label for="source-category">Category*</label>
+                    <select id="source-category" required>
+                        <option value="ai">AI</option>
+                        <option value="technology">Technology</option>
+                        <option value="brain-health">Brain Health</option>
+                        <option value="finance">Finance</option>
+                        <option value="hacker-news">Hacker News</option>
+                        <option value="switzerland">Switzerland</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="source-url">Source URL*</label>
+                    <input type="url" id="source-url" placeholder="e.g., https://techcrunch.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="source-selector">CSS Selector*</label>
+                    <input type="text" id="source-selector" placeholder="e.g., article h2 a" required>
+                    <small>CSS selector to find article links on the page</small>
+                </div>
+                <div class="form-group">
+                    <label for="source-description">Description</label>
+                    <textarea id="source-description" placeholder="Brief description of this news source"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="source-rating">Rating (1-10)</label>
+                    <input type="number" id="source-rating" min="1" max="10" value="5">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-add-source" class="action-button secondary">Cancel</button>
+                <button id="confirm-add-source" class="action-button primary">Add Source</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="settings.js"></script>
+</body>
+</html> 
