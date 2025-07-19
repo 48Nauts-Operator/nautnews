@@ -43,15 +43,15 @@ if ps -p $SERVER_PID > /dev/null; then
     # Detect OS and open browser accordingly
     if [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
-        open http://localhost:3001/naut-settings.html
+        open http://localhost:3002/naut-settings.html
     elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # Linux
-        xdg-open http://localhost:3001/naut-settings.html
+        xdg-open http://localhost:3002/naut-settings.html
     elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
         # Windows
-        start http://localhost:3001/naut-settings.html
+        start http://localhost:3002/naut-settings.html
     else
-        echo -e "${YELLOW}Please open http://localhost:3001/naut-settings.html in your browser${NC}"
+        echo -e "${YELLOW}Please open http://localhost:3002/naut-settings.html in your browser${NC}"
     fi
     
     echo -e "${YELLOW}Press Ctrl+C to stop the server${NC}"

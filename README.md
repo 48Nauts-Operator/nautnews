@@ -11,7 +11,7 @@ A modern web-based news aggregation system that scrapes articles from 100+ sourc
 This will:
 - Install dependencies if needed
 - Create the data directory
-- Start the server on port 3001
+- Start the server on port 3002
 - Open the settings page in your browser
 
 ## ✨ Features
@@ -26,13 +26,13 @@ This will:
 ## 🖥️ Usage
 
 ### Settings Page
-Access at: `http://localhost:3001/naut-settings.html`
+Access at: `http://localhost:3002/naut-settings.html`
 - Add, edit, or remove news sources
 - Configure scraping settings
 - Run the scraper manually
 
 ### News Page  
-Access at: `http://localhost:3001/naut-news.html`
+Access at: `http://localhost:3002/naut-news.html`
 - View latest scraped articles
 - Filter by category
 - Clean, responsive design
